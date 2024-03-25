@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 5px solid #ffc107; /* Orange border color */
+            border-radius: 5px;
+            resize: vertical;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Detection</h1>
+        <img src="spam_ham.jpg" alt="">
+        <form action="/display" method="POST">
+            <textarea name="text_of_email" rows="10" cols="50" placeholder="Enter email text..."></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <!-- <img src="spam_ham.jpg" alt="Spam Ham" class="image"> -->
+    </div>
+</body>
+</html>
+
